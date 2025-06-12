@@ -1,0 +1,3 @@
+/home/kto/Desktop/pf/build/CMakeFiles/pf.dir
+/home/kto/Desktop/pf/build/CMakeFiles/edit_cache.dir
+/home/kto/Desktop/pf/build/CMakeFiles/rebuild_cache.dir

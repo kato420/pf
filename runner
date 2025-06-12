@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Ir al directorio build
+cd "$(dirname "$0")"/build || exit 1
+
+# Configurar solo si no se ha hecho antes
+if [ ! -f build.ninja ]; then
+  cmake -G Ninja .. || exit 1
+fi
+
+# Forzar timestamp para que ninja recompile si hubo cambios sin guardar
+touch ../src/main.cpp
+
+# Compilar
+ninja || exit 1
+
+# Obtener el nombre del ejecutable desde el CMakeLists.txt
+EXE_NAME=$(grep -Po '(?<=project\().*(?=\))' ../CMakeLists.txt | head -n1)
+
+# Ejecutar si existe
+if [[ -f "$EXE_NAME" ]]; then
+  echo -e "\n=== Ejecutando ./$EXE_NAME ==="
+  echo "==============================="
+  ./"$EXE_NAME"
+else
+  echo "❌ Error: no se encontró el ejecutable '$EXE_NAME'"
+  exit 1
+fi
+
