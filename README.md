@@ -35,7 +35,7 @@ Cada cuadro cerrado será marcado con la inicial del jugador (`A` o `B`), y se l
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/tuusuario/dots-and-boxes.git
+git clone https://github.com/kato420/pf
 cd dots-and-boxes
 
 # Crear carpeta de compilación
