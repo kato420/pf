@@ -2,8 +2,7 @@
 
 int main()
 {
-  Matriz *m1 = new Matriz;
-  m1->menuJugar();
-  delete m1;
+  Matriz m1;
+  m1.menuJugar();
   return 0;
 }

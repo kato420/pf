@@ -33,7 +33,7 @@ std::string Matriz::getJ1()
 
 std::string Matriz::getJ2()
 {
-  return this->j1;
+  return this->j2;
 }
 
 void Matriz::setJ2(std::string j2)
@@ -81,7 +81,7 @@ void Matriz::menuJugar()
       std::cin.get();
       std::cin.ignore();
     }
-    else
+
     {
       valid = true;
     }
@@ -101,7 +101,7 @@ void Matriz::menuJugar()
     }
     break;
   case 2:
-    std::cout << "inicio del juego 2x2: \n";
+    std::cout << "inicio del juego 10x10: \n";
     while (true)
     {
       jugar(m2);
@@ -133,7 +133,7 @@ void Matriz::jugar(matriz &m)
       std::cin.clear();
       std::cin.ignore(1000, '\n');
       std::cout << "\nEntrada inválida. Presione Enter para continuar...";
-      std::cin.get();
+      std::cin.ignore();
       std::cin.get();
       continue;
     }
@@ -145,7 +145,7 @@ void Matriz::jugar(matriz &m)
       std::cin.clear();
       std::cin.ignore(1000, '\n');
       std::cout << "\nEntrada inválida. Presione Enter para continuar...";
-      std::cin.get();
+      std::cin.ignore();
       std::cin.get();
       continue;
     }
@@ -193,6 +193,15 @@ void Matriz::jugar(matriz &m)
 
     m[midX][y1] = "|";
     movimientoValido = true;
+  }
+  else
+  {
+    std::cout
+        << "\nMovimiento inválido. Solo se permiten líneas horizontales o verticales contiguas.\n";
+    std::cout << "Presione Enter para continuar...";
+    std::cin.ignore();
+    std::cin.get();
+    return;
   }
 
   char letraActual = (turno % 2 == 0) ? 'A' : 'B';
