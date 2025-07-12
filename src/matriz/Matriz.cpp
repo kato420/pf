@@ -95,16 +95,20 @@ void Matriz::menuJugar()
   {
   case 1:
     std::cout << "inicio del juego 6x6: \n";
-    while (true)
+    while (jugar(m1))
     {
-      jugar(m1);
     }
     break;
   case 2:
     std::cout << "inicio del juego 10x10: \n";
-    while (true)
+    while (jugar(m2))
     {
-      jugar(m2);
+    }
+    break;
+  case 3:
+    std::cout << "Nivel secreto: \n";
+    while (jugar(prueba))
+    {
     }
     break;
   default:
@@ -112,10 +116,25 @@ void Matriz::menuJugar()
   }
 }
 
-void Matriz::jugar(matriz &m)
+bool Matriz::jugar(matriz &m)
 {
   int oriFila, oriCol, destFila, destCol;
+  int cuadrosTotales = ((m.size() - 1) / 2) * ((m[0].size() - 1) / 2);
+  if (count_a + count_b == cuadrosTotales)
+  {
+    std::cout << "Juego terminado\n";
+    std::cout << "Puntaje final:\n";
+    std::cout << "Jugador A (" << j1 << "): " << count_a << "\n";
+    std::cout << "Jugador B (" << j2 << "): " << count_b << "\n";
+    if (count_a > count_b)
+      std::cout << "Ganador: A (" << j1 << ")\n";
+    else if (count_b > count_a)
+      std::cout << "Ganador: B (" << j2 << ")\n";
+    else
+      std::cout << "¡Empate!\n";
 
+    return false;
+  }
   while (true)
   {
     std::system("clear");
@@ -172,7 +191,7 @@ void Matriz::jugar(matriz &m)
       std::cout << "Presione Enter para continuar...";
       std::cin.ignore();
       std::cin.get();
-      return;
+      return true;
     }
 
     m[x1][midY] = "-";
@@ -188,7 +207,7 @@ void Matriz::jugar(matriz &m)
       std::cout << "Presione Enter para continuar...";
       std::cin.ignore();
       std::cin.get();
-      return;
+      return true;
     }
 
     m[midX][y1] = "|";
@@ -201,7 +220,7 @@ void Matriz::jugar(matriz &m)
     std::cout << "Presione Enter para continuar...";
     std::cin.ignore();
     std::cin.get();
-    return;
+    return true;
   }
 
   char letraActual = (turno % 2 == 0) ? 'A' : 'B';
@@ -216,11 +235,20 @@ void Matriz::jugar(matriz &m)
   }
   else
   {
+    if (letraActual == 'A')
+    {
+      count_a += puntos;
+    }
+    else
+    {
+      count_b += puntos;
+    }
     std::cout << letraActual << " completó " << puntos << " cuadro(s)! Juega otra vez.\n";
     std::cout << "Presione Enter para continuar...";
     std::cin.ignore();
     std::cin.get();
   }
+  return 1;
 }
 
 int Matriz::analizar(matriz &m, char letra)
@@ -241,6 +269,5 @@ int Matriz::analizar(matriz &m, char letra)
       }
     }
   }
-
   return contador;
 }

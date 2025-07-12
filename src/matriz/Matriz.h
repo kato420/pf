@@ -1,5 +1,5 @@
 #pragma once
-#include <iostream>
+// #include <iostream>
 #include <string>
 #include <vector>
 using matriz = std::vector<std::vector<std::string>>;
@@ -8,6 +8,8 @@ class Matriz
 {
 private:
   int turno = 0;
+  int count_a = 0;
+  int count_b = 0;
   std::string j1;
   std::string j2;
   matriz m1 = {
@@ -23,6 +25,20 @@ private:
       {"5", "+", " ", "+", " ", "+", " ", "+", " ", "+", " ", "+"},
       {" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "},
       {"6", "+", " ", "+", " ", "+", " ", "+", " ", "+", " ", "+"},
+  };
+  matriz prueba = {
+      {" ", "1", " ", "2", " ", "3", " ", "4", " ", "5", " ", "6"},
+      {"1", "+", "-", "+", "-", "+", "-", "+", " ", "+", " ", "+"},
+      {" ", "|", " ", "|", " ", "|", " ", "|", " ", "|", " ", " "},
+      {"2", "+", "-", "+", "-", "+", "-", "+", "-", "+", " ", "+"},
+      {" ", "|", " ", "|", " ", "|", " ", "|", " ", "|", " ", " "},
+      {"3", "+", "-", "+", "-", "+", "-", "+", "-", "+", " ", "+"},
+      {" ", "|", " ", "|", " ", "|", " ", "|", " ", " ", " ", " "},
+      {"4", "+", "-", "+", "-", "+", "-", "+", "-", "+", " ", "+"},
+      {" ", "|", " ", "|", " ", "|", " ", "|", " ", " ", " ", " "},
+      {"5", "+", "-", "+", "-", "+", "-", "+", "-", "+", " ", "+"},
+      {" ", "|", " ", "|", " ", "|", " ", "|", " ", " ", " ", " "},
+      {"6", "+", "-", "+", "-", "+", "-", "+", "-", "+", " ", "+"},
   };
   matriz m2 = {
       {" ", "1", " ", "2", " ", "3", " ", "4", " ", "5",
@@ -81,7 +97,9 @@ public:
   void infoMenu();
   void menuJugar();
   // ===== METODO QUE INICIA EL JUEGO *
-  void jugar(matriz &m);
+  bool jugar(matriz &m);
   // ===== METODO QUE ANALIZA LA MATRIZ *
   int analizar(matriz &m, char letra);
+  // ===== METODO QUE ANALIZA EL FINAL DEL JUEGO
+  bool juegoTerminado(const matriz &m);
 };
