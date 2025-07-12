@@ -134,4 +134,10 @@ Este proyecto fue desarrollado por:
 - **Huamán Yay Alexis**
 - **Ricse Roca Irene Fernanda**
 
+---
+
+## 📚 Bibliografía
+
+[1] Wikipedia, “Dots and Boxes.” [https://en.wikipedia.org/wiki/Dots_and_Boxes](https://en.wikipedia.org/wiki/Dots_and_Boxes), 2022.
+
 > ¡Gracias por revisar nuestro trabajo! ✨
