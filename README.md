@@ -101,7 +101,8 @@ Completar más cuadros que tu oponente, ganando así la partida.
 El siguiente diagrama representa la estructura de la clase `Matriz`, utilizada para gestionar la lógica central del juego.  
 Se detallan sus atributos principales, así como los métodos públicos que permiten inicializar el tablero, procesar jugadas, y determinar cuadros cerrados.
 
-![Diagrama de Clase](https://raw.githubusercontent.com/kato420/pf/master/img/diagrama.png)
+<!-- ![Diagrama de Clase](https://raw.githubusercontent.com/kato420/pf/master/img/diagrama.png) -->
+<img src="https://raw.githubusercontent.com/kato420/pf/master/img/diagrama.png" alt="Diagrama de Clases" width="500">
 
 ---
 
