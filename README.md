@@ -1,6 +1,9 @@
 # 🎮 Dots and Boxes
 
-![Logo](https://raw.githubusercontent.com/kato420/pf/master/img/logo.png)
+<!-- ![Logo](https://raw.githubusercontent.com/kato420/pf/master/img/logo.png) -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kato420/pf/master/img/logo.png" width="400">
+</p>
 
 ## 📖 Descripción del Proyecto
 
@@ -96,13 +99,21 @@ Completar más cuadros que tu oponente, ganando así la partida.
 
 ---
 
-## 🧭 Diagramas de Clases
-
-El siguiente diagrama representa la estructura de la clase `Matriz`, utilizada para gestionar la lógica central del juego.  
-Se detallan sus atributos principales, así como los métodos públicos que permiten inicializar el tablero, procesar jugadas, y determinar cuadros cerrados.
+<!-- ## 🧭 Diagramas de Clases -->
+<!---->
+<!-- El siguiente diagrama representa la estructura de la clase `Matriz`, utilizada para gestionar la lógica central del juego.   -->
+<!-- Se detallan sus atributos principales, así como los métodos públicos que permiten inicializar el tablero, procesar jugadas, y determinar cuadros cerrados. -->
 
 <!-- ![Diagrama de Clase](https://raw.githubusercontent.com/kato420/pf/master/img/diagrama.png) -->
-<img src="https://raw.githubusercontent.com/kato420/pf/master/img/diagrama.png" alt="Diagrama de Clases" width="500">
+<h3>📘 Diagrama de Clases</h3>
+<p>El siguiente diagrama representa la estructura de la clase <code>Matriz</code>, utilizada para gestionar la lógica central del juego.</p>
+<p>Se detallan sus atributos principales, así como los métodos públicos que permiten inicializar el tablero, procesar jugadas y determinar cuadros cerrados.</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/kato420/pf/master/img/diagrama.png" width="450">
+</p>
+
+<!-- <img src="https://raw.githubusercontent.com/kato420/pf/master/img/diagrama.png" alt="Diagrama de Clases" width="500"> -->
 
 ---
 
