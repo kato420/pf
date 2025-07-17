@@ -85,7 +85,6 @@ private:
 
 public:
   // ===== METODO QUE MUESTRA LA MATRIZ SELECCIONADA
-  void verMatriz(matriz m);
   // ===== GETTERS & SETTERS
   matriz getM1();
   matriz getM2();
@@ -94,10 +93,11 @@ public:
   void setJ1(std::string j1);
   void setJ2(std::string j2);
   // ===== METODO QUE INICIA EL MENÚ
+  // ===== METODO QUE INICIA EL JUEGO *
+  // ===== METODO QUE ANALIZA LA MATRIZ *
+  void verMatriz(matriz m);
   void infoMenu();
   void menuJugar();
-  // ===== METODO QUE INICIA EL JUEGO *
   bool jugar(matriz &m);
-  // ===== METODO QUE ANALIZA LA MATRIZ *
   int analizar(matriz &m, char letra);
 };

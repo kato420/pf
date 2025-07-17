@@ -120,7 +120,7 @@ void Matriz::menuJugar()
 bool Matriz::jugar(matriz &m)
 {
   int oriFila, oriCol, destFila, destCol;
-  int cuadrosTotales = ((m.size() - 1) / 2) * ((m[0].size() - 1) / 2);
+  int cuadrosTotales = ((m[0].size() - 1) / 2) * ((m[0].size() - 1) / 2);
   if (count_a + count_b == cuadrosTotales)
   {
     std::cout << "Juego terminado\n";
@@ -147,8 +147,8 @@ bool Matriz::jugar(matriz &m)
     verMatriz(m);
 
     std::cout << "\nIngrese origen (fila columna): ";
-    if (!(std::cin >> oriFila >> oriCol) || oriFila < 1 || oriFila > 10 || oriCol < 1 ||
-        oriCol > 10)
+    if (!(std::cin >> oriFila >> oriCol) || oriFila < 1 || oriFila > m[0].size() / 2 ||
+        oriCol < 1 || oriCol > m[0].size() / 2)
     {
       std::cin.clear();
       std::cin.ignore(1000, '\n');
@@ -159,8 +159,8 @@ bool Matriz::jugar(matriz &m)
     }
 
     std::cout << "Ingrese destino (fila columna): ";
-    if (!(std::cin >> destFila >> destCol) || destFila < 1 || destFila > 10 || destCol < 1 ||
-        destCol > 10)
+    if (!(std::cin >> destFila >> destCol) || destFila < 1 || destFila > m[0].size() / 2 ||
+        destCol < 1 || destCol > m[0].size() / 2)
     {
       std::cin.clear();
       std::cin.ignore(1000, '\n');
@@ -180,7 +180,7 @@ bool Matriz::jugar(matriz &m)
 
   std::system("clear");
 
-  bool movimientoValido = false;
+  // bool movimientoValido = false;
 
   if (x1 == x2 && std::abs(y1 - y2) == 2)
   {
@@ -196,7 +196,7 @@ bool Matriz::jugar(matriz &m)
     }
 
     m[x1][midY] = "-";
-    movimientoValido = true;
+    // movimientoValido = true;
   }
   else if (y1 == y2 && std::abs(x1 - x2) == 2)
   {
@@ -212,7 +212,7 @@ bool Matriz::jugar(matriz &m)
     }
 
     m[midX][y1] = "|";
-    movimientoValido = true;
+    // movimientoValido = true;
   }
   else
   {

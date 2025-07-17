@@ -1,0 +1,6 @@
+# Ignorar carpeta de configuración temporal y de VSCode
+.cache/
+.vscode/
+
+# Ignorar carpeta de compilación
+build/
