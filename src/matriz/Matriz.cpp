@@ -75,13 +75,13 @@ void Matriz::menuJugar()
       std::cout << "\n Entrada inválida. Solo números 0, 1 o 2.";
       std::cin.get();
     }
-    else if (opt < 0 || opt > 2)
+    else if (opt < 0 || opt > 3)
     {
       std::cout << "\n Opción fuera de rango. Intente nuevamente.";
       std::cin.get();
       std::cin.ignore();
     }
-
+    else
     {
       valid = true;
     }
@@ -105,13 +105,14 @@ void Matriz::menuJugar()
     {
     }
     break;
-  case 3:
+  case 0:
+    std::cout << "JUEGO TERMINADO\n";
+    break;
+  default:
     std::cout << "Nivel secreto: \n";
     while (jugar(prueba))
     {
     }
-    break;
-  default:
     break;
   }
 }
@@ -254,7 +255,6 @@ bool Matriz::jugar(matriz &m)
 int Matriz::analizar(matriz &m, char letra)
 {
   int contador = 0;
-
   for (int i = 1; i < m.size() - 1; i++)
   {
     for (int j = 1; j < m[i].size() - 1; j++)
