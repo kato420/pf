@@ -121,7 +121,8 @@ Completar más cuadros que tu oponente, ganando así la partida.
 
 Puedes ver una demostración del juego en el siguiente enlace:
 
-[🔗 Ver Video](https://youtu.be/uu9IzKrUdoc)
+[🔗 Video Completo](https://youtu.be/uu9IzKrUdoc)
+[🔗 Video Exposición](https://youtu.be/dGXv_Q4aTcQ?si=feCkJpJNNQugP9n9)
 
 <!-- Reemplaza la URL por la real cuando tengas el video subido -->
 
